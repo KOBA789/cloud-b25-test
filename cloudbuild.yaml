@@ -5,9 +5,9 @@ steps:
   args: ['build', '-t', 'gcr.io/koba789-misc/b25:$BRANCH_NAME', '.']
   dir: 'b25'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/koba789-misc/pcsc:$BRANCH_NAME', '.']
-  dir: 'pcsc'
+  args: ['build', '-t', 'gcr.io/koba789-misc/pcscd:$BRANCH_NAME', '.']
+  dir: 'pcscd'
   waitFor: ['-']
 images:
 - 'gcr.io/koba789-misc/b25:$BRANCH_NAME'
-- 'gcr.io/koba789-misc/pcsc:$BRANCH_NAME'
+- 'gcr.io/koba789-misc/pcscd:$BRANCH_NAME'
