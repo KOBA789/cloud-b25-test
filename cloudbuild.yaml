@@ -2,10 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: ['submodule', 'update', '--init']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/koba789-misc/b25:$BRANCH_NAME']
+  args: ['build', '-t', 'gcr.io/koba789-misc/b25:$BRANCH_NAME', '.']
   dir: 'b25'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/koba789-misc/pcsc:$BRANCH_NAME']
+  args: ['build', '-t', 'gcr.io/koba789-misc/pcsc:$BRANCH_NAME', '.']
   dir: 'pcsc'
   waitFor: ['-']
 images:
