@@ -1,0 +1,3 @@
+[submodule "b25/libarib25"]
+	path = b25/libarib25
+	url = https://github.com/stz2012/libarib25.git
